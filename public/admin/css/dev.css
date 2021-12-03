@@ -1,0 +1,29 @@
+.profile-text span {
+    font-size: 14px;
+    color: #cb8819;
+}
+.modal-content {
+    background-color: #404040;
+}
+.form-label5 {
+    margin-bottom: 20px;
+}
+.cut-text { 
+  text-overflow: ellipsis;
+  overflow: hidden; 
+  width: 160px; 
+  height: 1.2em; 
+  white-space: nowrap;
+}
+
+.feature-cut-text{
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* number of lines to show */
+    -webkit-box-orient: vertical;
+  }
+.btn-danger {
+    color: #fff !important;
+}

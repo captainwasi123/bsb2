@@ -1,0 +1,44 @@
+.authLinks a {
+    font-weight: 600;
+}
+
+.cut-text { 
+  text-overflow: ellipsis;
+  overflow: hidden; 
+  width: 230px; 
+  height: 1.2em; 
+  white-space: nowrap;
+
+}
+
+
+.feature-cut-text{
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
+.not-found {
+    color: #fff;
+}
+
+.custom-tag4 {
+  position: absolute;
+  background: #c98827;
+  right: 0px;
+  top: 0px;
+  color: white;
+  padding: 5px 13px;
+  border-radius: 0px 7px 1px 11px;
+  font-size: 15px;
+  letter-spacing: 0.4px;
+}
+
+.termc{
+  width: 3% !important;
+  height: calc(1em + -0.28rem + 1px) !important;
+
+}
