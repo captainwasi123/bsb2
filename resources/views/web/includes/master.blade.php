@@ -5,7 +5,8 @@
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="keywords" content="Collaborate, cross-marketing, increased sales, subscription with benefits, small business, beauty, minority owned">
-      <meta name="host" content="{{ URL::to('/') }}"
+      <meta name="host" content="{{ URL::to('/') }}">
+      @yield('meta')
       
       @include('web.includes.style')
       @yield('addStyle')

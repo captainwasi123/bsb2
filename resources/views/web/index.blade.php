@@ -1,5 +1,8 @@
 @extends('web.includes.master')
 @section('title', 'Home')
+@section('meta')
+   <meta name="facebook-domain-verification" content="xcmzlkxyf1yi3xtf60r1kq5edlwftz" />
+@endsection
 @section('content')
 
 <!-- Banner Section Starts Here -->
@@ -83,33 +86,29 @@
             @foreach ($users as $key =>$val )
 
             <div>
-               <div class="products-box vender-box">
-                  <div class="product-image">
-                    <center> <img src="{{URL::to('/public/storage/vendor/logo/'.$val->logo)}}" onerror="this.src='{{URL::to('/public/website')}}/images/product-placeholder.png';"> </center>
-                  </div>
-                  <div class="product-title" >
-
-                     {{--  <span class="cut-text"> {{$val->email}} </span><br>
-                     <span class="cut-text"> {{$val->business_name}} </span><br>
-                     <span class="cut-text">{{@$val->city}} <small>{{@$val->country->country}}</small>  </span><br>  --}}
-                     <p class="feature-cut-text" > {{$val->description}} </p>
-
-            <div class="" style='text-align:right;'>
-                         @if(Auth::check())
-                           <a href="javascript:void(0)" class="btn btn-success custom-tag4 favouriteVendor"  data-id="{{base64_encode($val->id)}}">
-                              @if(empty($val->favVender->id))
-                              <i class="material-icons md-18"> favorite_border </i>
-                              @else
-                             <i class="material-icons md-18"> favorite</i>
-                              @endif
-                           </a>
-                        @endif
+               <a href="{{empty($val->website_link) ? '#' : $val->website_link}}" target="_blank">
+                  <div class="products-box vender-box">
+                     <div class="product-image">
+                       <center> <img src="{{URL::to('/public/storage/vendor/logo/'.$val->logo)}}" onerror="this.src='{{URL::to('/public/website')}}/images/product-placeholder.png';"> </center>
                      </div>
-            </div>
+                     <div class="product-title" >
+                        <p class="feature-cut-text" > {{$val->description}} </p>
 
-
+                        <div class="" style='text-align:right;'>
+                            @if(Auth::check())
+                              <a href="javascript:void(0)" class="btn btn-success custom-tag4 favouriteVendor"  data-id="{{base64_encode($val->id)}}">
+                                 @if(empty($val->favVender->id))
+                                 <i class="material-icons md-18"> favorite_border </i>
+                                 @else
+                                <i class="material-icons md-18"> favorite</i>
+                                 @endif
+                              </a>
+                           @endif
+                        </div>
+                     </div>
                   </div>
-               </div>
+               </a>
+            </div>
 
             @endforeach
 
@@ -197,7 +196,7 @@
            <div class="col-md-4 col-lg-4 col-sm-4 col-12 no-pad">
               <div class="pricing-box">
                  <div class="pricing-box-head">
-                     <h6> Vendor side </h6>
+                  <br>
                      <h5> Exclusive Experience </h5>
                      <h4> $40 </h4>
                   </div>
@@ -241,7 +240,7 @@
            <div class="col-md-4 col-lg-4 col-sm-4 col-12 no-pad">
               <div class="pricing-box bg-yellow active">
                  <div class="pricing-box-head">
-                     <h5 class="col-white"> Customer Side </h5>
+                     <h5 class="col-white"> BSB Box </h5>
                      <h4 class="col-white"> $36 </h4>
                   </div>
 
@@ -287,7 +286,7 @@
            <div class="col-md-4 col-lg-4 col-sm-4 col-12 no-pad">
               <div class="pricing-box">
                  <div class="pricing-box-head">
-                     <h6> Vendor side </h6>
+                  <br>
                      <h5> Basic Experience </h5>
                      <h4> $20 </h4>
                   </div>

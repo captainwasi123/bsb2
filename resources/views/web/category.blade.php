@@ -21,33 +21,29 @@
             @foreach ($users as $key =>$val )
 
             <div>
-               <div class="products-box vender-box">
-                  <div class="product-image">
-                    <center> <img src="{{URL::to('/public/storage/vendor/logo/'.$val->logo)}}" onerror="this.src='{{URL::to('/public/website')}}/images/product-placeholder.png';"> </center>
-                  </div>
-                  <div class="product-title" >
-
-                     {{--  <span class="cut-text"> {{$val->email}} </span><br>
-                     <span class="cut-text"> {{$val->business_name}} </span><br>
-                     <span class="cut-text">{{@$val->city}} <small>{{@$val->country->country}}</small>  </span><br>  --}}
-                     <p class="feature-cut-text" > {{$val->description}} </p>
-
-            <div class="" style='text-align:right;'>
-                         @if(Auth::check())
-                           <a href="javascript:void(0)" class="btn btn-success custom-tag4 favouriteVendor"  data-id="{{base64_encode($val->id)}}">
-                              @if(empty($val->favVender->id))
-                              <i class="material-icons md-18"> favorite_border </i>
-                              @else
-                             <i class="material-icons md-18"> favorite</i>
-                              @endif
-                           </a>
-                        @endif
+               <a href="{{empty($val->website_link) ? '#' : $val->website_link}}" target="_blank">
+                  <div class="products-box vender-box">
+                     <div class="product-image">
+                       <center> <img src="{{URL::to('/public/storage/vendor/logo/'.$val->logo)}}" onerror="this.src='{{URL::to('/public/website')}}/images/product-placeholder.png';"> </center>
                      </div>
-            </div>
+                     <div class="product-title" >
+                        <p class="feature-cut-text" > {{$val->description}} </p>
 
-
+                        <div class="" style='text-align:right;'>
+                           @if(Auth::check())
+                              <a href="javascript:void(0)" class="btn btn-success custom-tag4 favouriteVendor"  data-id="{{base64_encode($val->id)}}">
+                                 @if(empty($val->favVender->id))
+                                 <i class="material-icons md-18"> favorite_border </i>
+                                 @else
+                                <i class="material-icons md-18"> favorite</i>
+                                 @endif
+                              </a>
+                           @endif
+                        </div>
+                     </div>
                   </div>
-               </div>
+               </a>
+            </div>
 
             @endforeach
 
