@@ -21,7 +21,7 @@
             @foreach ($users as $key =>$val )
 
             <div>
-               <a href="{{empty($val->website_link) ? '#' : $val->website_link}}" target="_blank">
+               <a href="{{empty($val->website_link) ? '#' : 'https://'.$val->website_link}}" target="_blank">
                   <div class="products-box vender-box">
                      <div class="product-image">
                        <center> <img src="{{URL::to('/public/storage/vendor/logo/'.$val->logo)}}" onerror="this.src='{{URL::to('/public/website')}}/images/product-placeholder.png';"> </center>
