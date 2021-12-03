@@ -95,7 +95,7 @@
    </section>
    <!-- Team Section Ends Here -->
    <!-- Contact Us Section Starts Here -->
-   <section class="our-team-sec">
+   <section class="our-team-sec" id="contact-us">
       <div class="container">
          <div class="row">
             <div class="col-md-12 col-lg-12 col-sm-12 col-12">

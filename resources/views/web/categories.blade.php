@@ -53,8 +53,8 @@
                   <p class="col-white" style="max-width: 700px;"> Ready to get your products and services featured for increased sales? </p>
                </div>
                <div class="cat-buttons block-element text-center m-t-30 ">
-               <a href="" class="cat-btn1"> Register Now </a>
-               <a href="index.html#contact-us-sec" class="cat-btn2"> Contact Us </a>
+               <a href="{{route('web.register')}}" class="cat-btn1"> Register Now </a>
+               <a href="{{route('web.about')}}#contact-us" class="cat-btn2"> Contact Us </a>
                </div>
             </div>
          </div>

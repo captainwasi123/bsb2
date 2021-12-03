@@ -273,10 +273,10 @@
 
                      <div class="pricing-box-button">
                       @if(Auth::check())
-                       <button type="submit" class="custom-btn1"> DISCOVER NOW </button>
+                       <button type="submit" class="custom-btn1" style="background:white;color:#c98827;"> DISCOVER NOW </button>
 
                        @else
-                       <a href="{{url('login')}}" class="custom-btn1"> DISCOVER NOW </a>
+                       <a href="{{url('login')}}" class="custom-btn1" style="background:white;color:#c98827;"> DISCOVER NOW </a>
 
                        @endif
                      </div>
