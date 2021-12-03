@@ -16,42 +16,15 @@
          </div>
 
          <div class="row">
-
-         <div class="col-md-4 col-lg-4 col-sm-6 col-12">
-         <div class="cat-box">
-         <a href="accessories.html"> <img src="{{URL::to('/public/website')}}/images/category-1.jpg"> </a>
-         </div>
-         </div>   
-
-         <div class="col-md-4 col-lg-4 col-sm-6 col-12">
-         <div class="cat-box">
-         <a href="services.html"> <img src="{{URL::to('/public/website')}}/images/category-2.jpg"> </a>
-         </div>
-         </div>   
-
-         <div class="col-md-4 col-lg-4 col-sm-6 col-12">
-         <div class="cat-box">
-         <a href="beauty.html"> <img src="{{URL::to('/public/website')}}/images/category-3.jpg"> </a>
-         </div>
-         </div>   
-
-         <div class="col-md-4 col-lg-4 col-sm-6 col-12">
-         <div class="cat-box">
-         <a href="closet.html"> <img src="{{URL::to('/public/website')}}/images/category-4.jpg"> </a>
-         </div>
-         </div>   
-
-         <div class="col-md-4 col-lg-4 col-sm-6 col-12">
-         <div class="cat-box">
-         <a href="customs.html"> <img src="{{URL::to('/public/website')}}/images/category-5.jpg"> </a>
-         </div>
-         </div>   
-
-         <div class="col-md-4 col-lg-4 col-sm-6 col-12">
-         <div class="cat-box">
-         <a href="pantry.html"> <img src="{{URL::to('/public/website')}}/images/category-6.jpg"> </a>
-         </div>
-         </div>   
+            @foreach($categories as $val)
+               <div class="col-md-4 col-lg-4 col-sm-6 col-12">
+                  <div class="cat-box">
+                     <a href="{{route('web.category', [base64_encode($val->id), $val->name])}}">
+                        <img src="{{URL::to('/public/website')}}/images/categories/{{$val->id.'.jpg'}}">
+                     </a>
+                  </div>
+               </div>
+            @endforeach  
 
          </div>
          

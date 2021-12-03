@@ -80,8 +80,8 @@ class webController extends Controller
     }
 
     function categories(){
-
-        return view('web.categories');
+        $data['categories'] =categories::all();
+        return view('web.categories')->with($data);
     }
 
     function category($id, $name){
