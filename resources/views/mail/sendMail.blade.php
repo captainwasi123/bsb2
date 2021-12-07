@@ -211,7 +211,7 @@
             <tr>
                 <td class="text-2" style="text-align: left;">
                     <p><b>Subject Line:</b> BSB Vendor Subscription Renewal</p>
-                    {{--  <p>Hello <b>{{ $name }}!</b></p>  --}}
+                    <p>Hello <b>{{ $name }}!</b></p>
                     <p>Thank you for being a part of the BSB Collaborative’s Virtual Box!</p>
 
                     <p>We wanted to remind you that you’ve chosen the automatic renewal option. Your subscription will be renewed for <b> $5000</b> on <b>25-05-2021</b>. If you wish to stick to your current plan, no action is required. If your billing information
