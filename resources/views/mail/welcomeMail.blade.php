@@ -195,10 +195,10 @@ td.menu-1 {
  		</tr>
  		<tr>
  			<td class="text-2" style="text-align: left;">
-                <p>BSB Collaborative LLC is one of the fastest-growing eCommerce stores in the digital space and is on a mission to help minority and women-owned small businesses improve the visibility of their products, services, and online stores. Whether you are a customer or vendor, the BSB Collaborative has benefits for you. We offer this with our Beautè Snob Boîte™ monthly subscription box and our BSB Virtual Box. </p>
+                <p><strong> BSB Collaborative LLC </strong> is one of the fastest-growing eCommerce stores in the digital space and is on a mission to help minority and women-owned small businesses improve the visibility of their products, services, and online stores. Whether you are a customer or vendor, the BSB Collaborative has benefits for you. We offer this with our Beautè Snob Boîte™ monthly subscription box and our BSB Virtual Box. </p>
                 <p>Through our Beautè Snob Boîte™ monthly subscription box, customers have exclusive access to shop with a purpose while enjoying quality products, special offers, and more from small businesses across the country.</p>
                 <p>As a BSB Virtual Box Vendor*, minority and women-owned businesses have an online presence to promote their brand. The BSB Collaborative is a true collaborative space that offers small businesses the ability to build their visibility through cross-marketing and collaboration with other small businesses. This pathway provides access to a boutique of powerful marketing tools and potential buyers to increase sales and the brand’s digital exposure. BSB Virtual Box Vendors receive all of this for a low monthly fee while selling, shipping, and keeping all of their profit!</p>
-                <p>We thank you for joining our mission for the success of minority and women-owned businesses. Please visit thevirtualbsb dot com for any questions, to send us a message, or to sign up to be approved as a BSB Virtual Box Vendor.* Our team is here for you!</p>
+                <p>We thank you for joining our mission for the success of minority and women-owned businesses. Please visit <a href="https://thevirtualbsb.com/"> thevirtualbsb </a>   for any questions, to send us a message, or to sign up to be approved as a BSB Virtual Box Vendor.* Our team is here for you!</p>
 
                 <h4><b>“We All Rise When We All Thrive”!</b></h4>
 
@@ -206,7 +206,7 @@ td.menu-1 {
 
                 <p><b>Meko, Natalia, & A’Mera</b></p>
 
-                <p style="text-align: center; padding-top: 20px;">*BSB Virtual Box Vendors are approved within 3 business days and are subject to approval. Promotional BSB Virtual Box Vendors will receive a separate e.mail with instructions.</p>
+                <p style="text-align: center; padding-top: 20px;">*BSB Virtual Box Vendors are approved within 3 business days and are subject to approval. Promotional BSB Virtual Box Vendors will receive a separate email with instructions.</p>
             </td>
  		</tr>
  			<tr >
