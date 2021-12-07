@@ -217,10 +217,11 @@ td.menu-1 {
  			</tr>
  			<tr>
  			 <td class="social-links"> 
- 			 	<a href="#"> <img src="{{URL::to('/public/website')}}/images/email/fb-icon.svg"> </a>
- 			 	<a href="#"> <img src="{{URL::to('/public/website')}}/images/email/instagram-icon.svg"> </a>
- 			 	<a href="#"> <img src="{{URL::to('/public/website')}}/images/email/linkedin-icon.svg"> </a>
- 			 	<a href="#"> <img src="{{URL::to('/public/website')}}/images/email/twitter-icon.svg"> </a>
+
+ 			        <a href="#"> <img src="{{URL::to('/public/website')}}/images/email/fb.png"> </a>
+                    <a href="#"> <img src="{{URL::to('/public/website')}}/images/email/instagram.png"> </a>
+                    <a href="#"> <img src="{{URL::to('/public/website')}}/images/email/linkedin.png"> </a>
+                    <a href="#"> <img src="{{URL::to('/public/website')}}/images/email/twitter.png"> </a>
  			   </td>
  		</tr>
  		<tr>
