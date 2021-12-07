@@ -10,6 +10,7 @@ use App\Models\membership\Membership_vendor as MV;
 use App\Models\membership\vendor_buy_membership_package as VBMP;
 use Auth;
 use DB;
+use Mail;
 use Carbon\Carbon;
 
 class adminController extends Controller
@@ -139,7 +140,7 @@ class adminController extends Controller
 
         $curr = date('Y-m-d');
         $validate = date('Y-m-d', strtotime('+5 days', strtotime($curr)));
-        $data = User::where('is_feature',2)
+        $data = User::where('is_feature',1)
                     ->whereHas('featured', function($q) use ($validate){
                         return $q->where('expired_date', $validate);
                     })
@@ -154,7 +155,7 @@ class adminController extends Controller
             Mail::send('mail.sendMail', $data, function($message) use ($to_name, $to_email) {
             $message->to($to_email, $to_name)
             ->subject("Subscription Expiry Notification");
-            $message->from("Info@bsb.com","Test Mail");
+            $message->from("Info@bsb.com","BSB");
             });
 
         }

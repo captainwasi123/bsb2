@@ -10,6 +10,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use App\Models\favourite_prod_user as fav;
 use App\Models\fav_vendor as FVENDR;
+use Mail;
 
 
 
@@ -133,7 +134,25 @@ class webController extends Controller
             'password' => 'required|confirmed|min:6',
         ]);
         $data = $request->all();
+        
         User::addUser($data);
+ 
+       
+
+             $to_name = $data['fullname'];
+            $to_email = $data['email'];
+            // $data = array("name"=>$val->name);
+            
+            Mail::send('mail.welcomeMail', $data, function($message) use ( $to_email, $to_name) {
+            $message->to($to_email, $to_name)
+            ->subject("Welcome to BSB");
+            $message->from("Info@bsb.com","BSB");
+            });
+
+
+
+
+
         return redirect(route('web.login'))->with('success', 'Account Created.');
     }
 
