@@ -24,7 +24,9 @@
 
                 <div class="table-responsive m-t-20">
                     <table id="myTable" class="table table-bordered table-striped">
+                    @if($vendor->count()!=0)
                      <a href="{{route('admin.featured_member.memberSendMail')}}" class="btn btn-success gold-b pull-right " data-id="">Send Email <i class="fa fa-envelope"></i></a>
+                     @endif
                         <thead>
                             <tr>
                                 <th>#</th>
