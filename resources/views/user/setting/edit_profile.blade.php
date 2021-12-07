@@ -82,8 +82,8 @@
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label class="control-label">Province</label>
-                                                    <input type="text" class="form-control" name="province" value="{{Auth::user()->province}}" required>
+                                                    <label class="control-label">ZipCode</label>
+                                                    <input type="number" class="form-control" name="province" value="{{Auth::user()->province}}" required>
                                                 </div>
                                             </div>
 
