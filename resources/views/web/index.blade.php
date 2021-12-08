@@ -241,7 +241,7 @@
               <div class="pricing-box bg-yellow active">
                  <div class="pricing-box-head">
                      <h5 class="col-white"> BSB Box </h5>
-                     <h4 class="col-white"> $36 </h4>
+                     <h4 class="col-white"> $45 </h4>
                   </div>
 
                   <form method="post" action="{!! URL::route('user.paypal') !!}">
@@ -256,7 +256,7 @@
                           <li class="col-white"> <i class="fa fa-check col-white"> </i>  Monthly Promo codes to vendor website Special
                              dedicated Customer service Team.
                           </li>
-                          <li class="col-white"> 
+                          <li class="col-white">
                               <input class="form-check-input" type="checkbox" value="10" id="flexCheckDefault0" name="addons[]">
                               <label class="form-check-label"  for="flexCheckDefault0">
                                  <p><span>   w/$10 add on to be BSB Product Tester  </span></p>
