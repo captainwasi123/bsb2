@@ -114,7 +114,7 @@
               <div class="pricing-box bg-yellow active">
                  <div class="pricing-box-head">
                      <h5 class="col-white"> BSB Box </h5>
-                     <h4 class="col-white"> $36 </h4>
+                     <h4 class="col-white"> $45 </h4>
                   </div>
 
                   <form method="post" action="{!! URL::route('user.paypal') !!}">
