@@ -31,7 +31,7 @@ Route::get('/clear-cache', function() {
         Route::get('category/{id}/{name}', 'webController@category')->name('web.category');
         Route::get('/product/fav/{id}', 'webController@favprod');
         Route::get('/vendr/fav/{id}', 'webController@favVender');
-      
+
         Route::get('physicalBox', 'webController@physicalBox')->name('web.physical_box');
 
 
@@ -41,8 +41,15 @@ Route::get('/clear-cache', function() {
 
         Route::post('login', 'webController@loginSubmit');
         Route::post('register', 'webController@registerSubmit');
-      
-        
+
+        // forget password
+
+        Route::get('forget-password', 'webController@showForgetPasswordForm')->name('forget.password.get');
+        Route::post('forget-password', 'webController@submitForgetPasswordForm')->name('forget.password.post');
+        Route::get('reset-password/{token}', 'webController@showResetPasswordForm')->name('reset.password.get');
+        Route::post('reset-password', 'webController@submitResetPasswordForm')->name('reset.password.post');
+
+
     });
 
 
@@ -67,7 +74,7 @@ Route::get('/clear-cache', function() {
         Route::get('/setting/password', 'userController@settingPassword')->name('user.setting.settingPassword');
         Route::post('/setting/password', 'userController@settingPasswordSubmit');
         Route::post('become_a_vendor', 'userController@becomeVendor')->name('user.become_a_vendor');
-       
+
 
 
         Route::post('paypal', array('as' => 'user.paypal','uses' => 'paypalController@postPaymentWithpaypal',));
@@ -110,14 +117,14 @@ Route::get('/clear-cache', function() {
                 Route::get('edit/{id}', 'productController@editProduct')->name('vendor.product.edit');
                 Route::post('update', 'productController@updateProduct')->name('vendor.product.update');
 
-                
 
-                // product feature 
+
+                // product feature
                 Route::get('FeaturProPending', 'productController@FeaturProPending')->name('vendor.product.FeaturProPending');
                 Route::get('FeatureProApprove', 'productController@FeatureProApprove')->name('vendor.product.FeatureProApprove');
                 Route::get('FeatureProReject', 'productController@FeatureProReject')->name('vendor.product.FeatureProReject');
-             
-                
+
+
                 // Pro pendig status
                 Route::get('featureStatusPend/{id}/{status}', 'productController@featureprodStatus')->name('vendor.product.changeStatus');
                 Route::get('unfeaturePro/{id}/{status}', 'productController@unfeaturePro')->name('vendor.product.unfeaturePro');
@@ -152,7 +159,7 @@ Route::get('/clear-cache', function() {
                 Route::get('blocked', 'adminController@vendorBlocked')->name('admin.vendor.vendorBlocked');
 
                 Route::get('changeStatus/{id}/{status}', 'adminController@changeStatus')->name('admin.vendor.changeStatus');
-               
+
                 Route::get('featureStatus/{id}/{status}', 'adminController@featureStatus')->name('admin.vendor.featureStatus');
 
                 Route::get('publish/{id}', 'adminController@publishVendor');
@@ -185,8 +192,8 @@ Route::get('/clear-cache', function() {
                 Route::get('cancelFeaPro/{id}/{status}', 'productController@cancelFeaPro')->name('admin.users.cancelFeaPro');
                 Route::get('rejectFeaPro/{id}/{status}', 'productController@rejectFeaPro')->name('admin.users.rejectFeaPro');
 
-                
-               
+
+
 
             });
 

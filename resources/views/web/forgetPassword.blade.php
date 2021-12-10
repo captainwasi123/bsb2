@@ -29,27 +29,24 @@
                @endif
             </div>
             <div class="login-screen-content">
-               <form method="post">
+                <form action="{{ route('forget.password.post') }}" method="POST">
                   @csrf
                   <div class="form-label5">
-                     <h6 class="col-white"> Email Address </h6>
-                     <input type="email" class="form-field5" name="email" required>
+                     <h6 class="col-white"> Email Address </h6>                    
+                      <input type="email" id="email_address" placeholder="Email Address" class="form-field5" name="email" required>
+                           @if ($errors->has('email'))
+                              <span class="text-danger">{{ $errors->first('email') }}</span>
+                           @endif
                   </div>
-                  <div class="form-label5">
-                     <h6 class="col-white"> Password </h6>
-                     <input type="password" class="form-field5" name="password" required>
-                  </div>
-                  <div class="forgot-pass">
-                     <a href="{{URL::to('/forget-password')}}" class="col-white"> Forgot password </a>
-                  </div>
+                 
                   <div class="form-label5 m-t-20">
-                     <input type="submit" value="LOGIN" class="submit-btn3" name="">
+                     <input type="submit" value="Send Password Reset Link" class="submit-btn3" name="">
                   </div>
                </form>
             </div>
             <div class="already-account">
                <h4 class="col-white m-b-15"> OR </h4>
-               <p class="m-b-25"> <a href="{{route('web.register')}}" class="col-white"> Create an Account </a> </p>
+               <p class="m-b-25"> <a href="{{route('web.login')}}" class="col-white"> Login </a> </p>
             </div>
          </div>
       </section>

@@ -28,28 +28,51 @@
                    </div>
                @endif
             </div>
+
             <div class="login-screen-content">
-               <form method="post">
-                  @csrf
+
+              <form action="{{ route('reset.password.post') }}" method="POST">
+                          @csrf
+                          <input type="hidden" name="token" value="{{ $token }}">
+                          {{--  <input type="hidden" name="email" value="{{base64_encode($email)}}">  --}} 
                   <div class="form-label5">
                      <h6 class="col-white"> Email Address </h6>
-                     <input type="email" class="form-field5" name="email" required>
+                     <input type="email" placeholder="Enter your valid email" id="email"  class="form-field5" name="email" required>
+                           @if ($errors->has('email'))
+                              <span class="text-danger">{{ $errors->first('email') }}</span>
+                            @endif
                   </div>
+                  
                   <div class="form-label5">
                      <h6 class="col-white"> Password </h6>
-                     <input type="password" class="form-field5" name="password" required>
+                     <input type="password" placeholder="Your Password" id="password" class="form-field5"  name="password" required>
+                        @if ($errors->has('password'))
+                            <span class="text-danger">{{ $errors->first('password') }}</span>
+                        @endif
                   </div>
-                  <div class="forgot-pass">
-                     <a href="{{URL::to('/forget-password')}}" class="col-white"> Forgot password </a>
+
+
+                  <div class="form-label5">
+                     <h6 class="col-white"> Password </h6>
+
+                      <input type="password" id="confirmation_password"  placeholder="Confirm Password" name="confirmation_password" class="form-field5"  required>
+                                  @if ($errors->has('confirmation_password'))
+                                      <span class="text-danger">{{ $errors->first('confirmation_password') }}</span>
+                                  @endif
                   </div>
+                  
                   <div class="form-label5 m-t-20">
-                     <input type="submit" value="LOGIN" class="submit-btn3" name="">
+                     <input type="submit" value="Resert Password" class="submit-btn3" name="">
                   </div>
                </form>
             </div>
             <div class="already-account">
                <h4 class="col-white m-b-15"> OR </h4>
                <p class="m-b-25"> <a href="{{route('web.register')}}" class="col-white"> Create an Account </a> </p>
+            </div>
+             <div class="already-account">
+               <h4 class="col-white m-b-15"> OR </h4>
+               <p class="m-b-25"> <a href="{{route('web.login')}}" class="col-white"> Login </a> </p>
             </div>
          </div>
       </section>
