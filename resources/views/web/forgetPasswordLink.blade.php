@@ -34,14 +34,7 @@
               <form action="{{ route('reset.password.post') }}" method="POST">
                           @csrf
                           <input type="hidden" name="token" value="{{ $token }}">
-                          {{--  <input type="hidden" name="email" value="{{base64_encode($email)}}">  --}} 
-                  <div class="form-label5">
-                     <h6 class="col-white"> Email Address </h6>
-                     <input type="email" placeholder="Enter your valid email" id="email"  class="form-field5" name="email" required>
-                           @if ($errors->has('email'))
-                              <span class="text-danger">{{ $errors->first('email') }}</span>
-                            @endif
-                  </div>
+                 
                   
                   <div class="form-label5">
                      <h6 class="col-white"> Password </h6>
@@ -53,7 +46,7 @@
 
 
                   <div class="form-label5">
-                     <h6 class="col-white"> Password </h6>
+                     <h6 class="col-white"> Confirm Password </h6>
 
                       <input type="password" id="confirmation_password"  placeholder="Confirm Password" name="confirmation_password" class="form-field5"  required>
                                   @if ($errors->has('confirmation_password'))
