@@ -15,7 +15,7 @@
                <a href="{{URL::to('/')}}">
                   <img src="{{URL::to('/public/website')}}/images/logo.png">
                </a>
-               <h3 class="col-white"> LOGIN TO YOUR ACCOUNT </h3>
+               <h3 class="col-white"> Forget Password </h3>
 
                @if(session()->has('success'))
                    <div class="alert alert-success">
