@@ -47,7 +47,11 @@
                               <td>{{$val->name}}</td>
                               <td>{{$val->business_name}}</td>
                               <td>{{$val->phone}}</td>
-                              <td>{{$val->email}}</td>
+                              <td>{{$val->email}}<br>
+                                @if($val->by_admin==1)
+                                         <span class="label label-info"> Featured By Admin</span>
+                                @endif
+                              </td>
                               <td>{{@$val->country->country}}</td>
                               <td>{{$val->created_at->isoFormat('dddd D  M  Y') }}</td>
                               <td>{{$val->updated_at->isoFormat('dddd D M Y') }}</td>
