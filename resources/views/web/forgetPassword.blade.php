@@ -38,7 +38,6 @@
                               <span class="text-danger">{{ $errors->first('email') }}</span>
                            @endif
                   </div>
-                 
                   <div class="form-label5 m-t-20">
                      <input type="submit" value="Send Password Reset Link" class="submit-btn3" name="">
                   </div>

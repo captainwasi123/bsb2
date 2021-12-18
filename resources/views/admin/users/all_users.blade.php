@@ -32,6 +32,8 @@
                                 <th>COUNTRY</th>
                                 <th>REG AT</th>
                                 <th>ACTION</th>
+                                
+
                             </tr>
                         </thead>
                         <tbody>
@@ -40,12 +42,17 @@
                                     <td>{{++$key}}</td>
                                     <td><img src="{{URL::to('/public/storage/user/profile/'.$val->image)}}" width="50px" onerror="this.src='{{URL::to('/public/admin')}}/images/users/placeholder.png';"></td>
                                     <td>{{$val->name}}</td>
-                                    <td>{{$val->email}}</td>
+                                    <td>{{$val->email}}
+                               
+
+                                    </td>
                                     <td>{{@$val->country->country}}</td>
                                     <td>{{date('d-M-Y h:i A', strtotime($val->created_at))}}</td>
                                     <td class="p-l-0 p-r-0 action">
                                         <a href="javascript:void(0)" class="btn btn-success gold-b rejectUser" data-id="{{base64_encode($val->id)}}"><i class="fa fa-ban"></i></a>                  
-                                    </td>                                                
+                                    </td>  
+                                   
+                                                                                 
                                 </tr>
                             @endforeach                                          
                         </tbody>

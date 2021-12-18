@@ -12,6 +12,8 @@ class vendor_buy_membership_package extends Model
     protected $table ='tbl_vendor_buy_membership_package';
 
 
+   
+
     public function user(){
         
         return $this->belongsto(User::class, 'user_id', 'id'); 

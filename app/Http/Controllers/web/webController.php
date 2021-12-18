@@ -153,14 +153,11 @@ class webController extends Controller
             $message->from("Info@bsb.com","BSB");
             });
 
-
-
-
-
         return redirect(route('web.login'))->with('success', 'Account Created.');
     }
 
 
+    
     // forget password
 
     function showForgetPasswordForm(){

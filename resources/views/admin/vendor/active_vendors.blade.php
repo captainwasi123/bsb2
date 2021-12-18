@@ -35,6 +35,7 @@
                                 <th>WEBSITE LINK</th>
                                 <th>DISCRIPTION</th>
                                 <th>ACTION</th>
+                                <th>Direct Featured</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -45,7 +46,11 @@
                               <td>{{$val->name}}</td>
                               <td>{{$val->business_name}}</td>
                               <td>{{$val->phone}}</td>
-                              <td>{{$val->email}}</td>
+                              <td>{{$val->email}}<br>
+                                @if($val->by_admin==1)
+                                         <span class="label label-info"> Featured By Admin</span>
+                                @endif
+                              </td>
                               <td>{{@$val->country->country}}</td>
                               <td>{{$val->website_link}}</td>
                               <td><p class="cut-text">{{$val->description}}</p></td>
@@ -53,6 +58,11 @@
                                   <a href="javascript:void(0)" class="btn btn-success gold-b rejectVendor" data-id="{{base64_encode($val->id)}}"><i class="fa fa-ban"></i></a>
                                     
                               </td>
+                               <td class="p-l-0 p-r-0 action">
+                                      @if($val->by_admin!=1)
+                                        <a href="javascript:void(0)" class="btn btn-success gold-b directfeatured" data-id="{{base64_encode($val->id)}}"><i class="fa fa-check-circle"></i></a>                  
+                                         @endif
+                                    </td>  
                           </tr>
                       @endforeach
 

@@ -32,6 +32,15 @@ $(document).ready(function() {
         }
     });
 
+      $(document).on('click', '.directfeatured', function() {
+       
+        var user_id = $(this).data('id');
+
+        if (confirm('Are you sure want to become Feature ?')) {
+            window.location.href = host + "/vendor/directfeatured/" + user_id ;
+        }
+    });
+
     $(document).on('click', '.unfeatureVendor', function() {
         var is_feature = 2;
         var user_id = $(this).data('id');

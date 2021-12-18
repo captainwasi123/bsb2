@@ -162,6 +162,9 @@ Route::get('/clear-cache', function() {
 
                 Route::get('featureStatus/{id}/{status}', 'adminController@featureStatus')->name('admin.vendor.featureStatus');
 
+                Route::get('directfeatured/{id}', 'adminController@directfeatured')->name('admin.vendor.directfeatured');
+
+
                 Route::get('publish/{id}', 'adminController@publishVendor');
 
 

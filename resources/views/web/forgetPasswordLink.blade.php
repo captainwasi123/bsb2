@@ -34,8 +34,6 @@
               <form action="{{ route('reset.password.post') }}" method="POST">
                           @csrf
                           <input type="hidden" name="token" value="{{ $token }}">
-                 
-                  
                   <div class="form-label5">
                      <h6 class="col-white"> Password </h6>
                      <input type="password" placeholder="Your Password" id="password" class="form-field5"  name="password" required>
@@ -43,15 +41,12 @@
                             <span class="text-danger">{{ $errors->first('password') }}</span>
                         @endif
                   </div>
-
-
                   <div class="form-label5">
                      <h6 class="col-white"> Confirm Password </h6>
-
                       <input type="password" id="confirmation_password"  placeholder="Confirm Password" name="confirmation_password" class="form-field5"  required>
-                                  @if ($errors->has('confirmation_password'))
-                                      <span class="text-danger">{{ $errors->first('confirmation_password') }}</span>
-                                  @endif
+                           @if ($errors->has('confirmation_password'))
+                              <span class="text-danger">{{ $errors->first('confirmation_password') }}</span>
+                           @endif
                   </div>
                   
                   <div class="form-label5 m-t-20">

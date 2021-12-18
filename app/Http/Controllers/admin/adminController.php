@@ -159,6 +159,7 @@ class adminController extends Controller
             });
 
         }
+        
         return redirect()->back()->with('success', 'Email has been sent successfully');
 
   
@@ -172,6 +173,36 @@ class adminController extends Controller
     function memberCancel(){
 
     	return view('admin.featured_member.cancel_member');
+    }
+
+
+    function directfeatured($id)
+    {
+        $id = base64_decode($id);
+       
+        $st = VBMP::where('user_id', $id)->update([
+            'status' => '2'
+        ]);
+        
+        $u = User::find($id);
+        $u->is_feature = '1';
+        $u->by_admin='1';
+        $u->save();
+
+        $date = date('Y-m-d');
+            
+        $mp = new VBMP;
+        $mp->user_id = $id;
+        $mp->membership_vendor_id= '2';
+        $mp->status=1;
+        $mp->expired_date=date('Y-m-d', strtotime($date. ' + 30 days')); 
+        $mp->buy_date=$date;
+        $mp->save();
+    
+
+        return redirect()->back()->with('success', 'Vendor Feature Updated.');
+      
+
     }
 
 
