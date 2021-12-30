@@ -111,7 +111,7 @@
                                         </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label>Business Discription</label>
+                                                    <label>Business Description</label>
                                                     <textarea class="form-control" rows="5" cols="40" name="description">{{Auth::user()->description}}</textarea>
                                                 </div>
                                             </div>

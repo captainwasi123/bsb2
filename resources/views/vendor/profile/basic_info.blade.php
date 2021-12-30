@@ -46,7 +46,7 @@
                             <input type="text" class="form-control" name="phone" value="{{Auth::user()->phone}}" required>
                         </div>
                     </div>
-        
+
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>Address *</label>
@@ -87,9 +87,9 @@
                             <input type="text" class="form-control" name="province" value="{{Auth::user()->province}}" required>
                         </div>
                     </div>
-                    
+
                 </div>
-                
+
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group">
@@ -98,7 +98,7 @@
                         </div>
                     </div>
                     <!--/span-->
-                    <div class="col-md-6">               
+                    <div class="col-md-6">
                     <div class="form-group">
                         <label for="input-file-now">Upload Image / Logo</label>
                         <input type="file" id="input-file-now" class="dropify" name="logo_file" />
@@ -106,7 +106,7 @@
                 </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label>Business Discription</label>
+                            <label>Business Description </label>
                             <textarea class="form-control" rows="5" cols="40" name="description">{{Auth::user()->description}}</textarea>
                         </div>
                     </div>

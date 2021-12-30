@@ -33,9 +33,11 @@
                                 <th>EMAIL</th>
                                 <th>COUNTRY</th>
                                 <th>WEBSITE LINK</th>
-                                <th>DISCRIPTION</th>
+                                <th>DESCRIPTION</th>
                                 <th>ACTION</th>
                                 <th>Direct Featured</th>
+                                <th>Direct Login</th>
+
                             </tr>
                         </thead>
                         <tbody>
@@ -56,13 +58,16 @@
                               <td><p class="cut-text">{{$val->description}}</p></td>
                               <td class="p-l-0 p-r-0 action">
                                   <a href="javascript:void(0)" class="btn btn-success gold-b rejectVendor" data-id="{{base64_encode($val->id)}}"><i class="fa fa-ban"></i></a>
-                                    
+
                               </td>
                                <td class="p-l-0 p-r-0 action">
                                       @if($val->by_admin!=1)
-                                        <a href="javascript:void(0)" class="btn btn-success gold-b directfeatured" data-id="{{base64_encode($val->id)}}"><i class="fa fa-check-circle"></i></a>                  
+                                        <a href="javascript:void(0)" class="btn btn-success gold-b directfeatured" data-id="{{base64_encode($val->id)}}"><i class="fa fa-check-circle"></i></a>
                                          @endif
-                                    </td>  
+                                    </td>
+                                       
+                              <td><center> <a href="{{route('admin.venderlogin', base64_encode($val->id))}}" class="btn btn-success gold-b" data-id="" onclick="return confirm('Are you sure you want to sign this Vendor?');" target="_blank"><i class="fa fa-sign-in"></i></a></center></td>
+                                  
                           </tr>
                       @endforeach
 

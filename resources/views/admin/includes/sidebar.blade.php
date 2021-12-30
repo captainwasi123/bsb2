@@ -22,36 +22,36 @@
                 </li>
                 <li class="nav-small-cap">VENDORS</li>
                 <li><a href="{{route('admin.vendor.vendorNew')}}">NEW REQUEST </a></li>
-                <li><a href="{{route('admin.vendor.vendorActive')}}">ACTIVE</a></li> 
+                <li><a href="{{route('admin.vendor.vendorActive')}}">ACTIVE</a></li>
                 <!-- <li><a href="{{route('admin.vendor.vendorFeatured')}}">FEATURED</a></li>  -->
-                <li><a href="{{route('admin.vendor.vendorBlocked')}}">BLOCKED</a></li> 
+                <li><a href="{{route('admin.vendor.vendorBlocked')}}">BLOCKED</a></li>
 
                 <li class="nav-small-cap">USERS</li>
                 <li><a href="{{route('admin.users.usersAll')}}">ALL</a></li>
-                <li><a href="{{route('admin.users.usersPremium')}}">PREMIUM</a></li> 
-                <li><a href="{{route('admin.users.usersBlocked')}}">BLOCKED</a></li> 
+                <li><a href="{{route('admin.users.usersPremium')}}">PREMIUM</a></li>
+                <li><a href="{{route('admin.users.usersBlocked')}}">BLOCKED</a></li>
 
                 <li class="nav-small-cap">FEATURED MEMBERSHIP</li>
-                <li><a href="{{route('admin.featured_member.memberPending')}}">QUE</a></li> 
-                <li><a href="{{route('admin.featured_member.memberPublish')}}">PUBLISHED</a></li> 
-                <li><a href="{{route('admin.featured_member.memberExpired')}}">UPCOMING EXPIRED</a></li> 
+                <li><a href="{{route('admin.featured_member.memberPending')}}">QUE</a></li>
+                <li><a href="{{route('admin.featured_member.memberPublish')}}">PUBLISHED</a></li>
+                <li><a href="{{route('admin.featured_member.memberExpired')}}">UPCOMING EXPIRED</a></li>
 
                 <li class="nav-small-cap"> PRODUCTS</li>
-                <li><a href="{{route('admin.featured_product.productPending')}}">PENDING</a></li> 
-                <li><a href="{{route('admin.featured_product.productPublish')}}">All APPROVE</a></li> 
-                <li><a href="{{route('admin.featured_product.productBlocked')}}">BLOCKED</a></li> 
+                <li><a href="{{route('admin.featured_product.productPending')}}">PENDING</a></li>
+                <li><a href="{{route('admin.featured_product.productPublish')}}">All APPROVE</a></li>
+                <li><a href="{{route('admin.featured_product.productBlocked')}}">BLOCKED</a></li>
 
 
-                <li class="nav-small-cap"> FEATURED PRODUCTS</li>
-                <li><a href="{{route('admin.featured_product.featproductApprove')}}">All PRODUCT</a></li> 
-                <li><a href="{{route('admin.featured_product.featproductPending')}}"> PENDING</a></li> 
-                
+                <li class="nav-small-cap">  PRODUCTS</li>
+                <li><a href="{{route('admin.featured_product.featproductApprove')}}">All PRODUCT</a></li>
+                <li><a href="{{route('admin.featured_product.featproductPending')}}"> PENDING</a></li>
 
-                
+
+
                 <li class="nav-small-cap">SETTING</li>
-                <li><a href="{{route('admin.setting.settingRole')}}">ADMIN ROLE</a></li> 
-                
-                <li class="nav-small-cap">LOGOUT</li>                
+                <li><a href="{{route('admin.setting.settingRole')}}">ADMIN ROLE</a></li>
+
+                <li class="nav-small-cap">LOGOUT</li>
             </ul>
         </nav>
         <!-- End Sidebar navigation -->

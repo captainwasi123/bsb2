@@ -1,7 +1,7 @@
 @extends('admin.includes.master')
 @section('title', 'Publish Membership')
 @section('content')
-       
+
 <!-- Row -->
    <div class="card-group">
         <div class="card">
@@ -35,7 +35,8 @@
                                 <th> Created At</th>
 
                                 <th>Update At</th>
-                               
+                                <th>Unfeature</th>
+
                                 {{--  <th>ACTION</th>  --}}
                             </tr>
                         </thead>
@@ -61,6 +62,9 @@
                                     <a href="javascript:void(0)" data-id="{{base64_encode($val->id)}}" class="btn btn-success gold-b featureVendor"  data-toggle="tooltip" data-original-title="Feature Vendor"><i class="fa fa-check-circle"></i> </a>
                                     @endif
                               </td>  --}}
+
+
+                              <td><center> <a href="{{route('admin.featured_member.venderbuypDelete', base64_encode($val->id))}}" class="btn btn-success gold-b" data-id="" onclick="return confirm('Are you sure you want to delete this Member Package?');"><i class="fa fa-trash"></i></a></center></td>
                           </tr>
                       @endforeach
 

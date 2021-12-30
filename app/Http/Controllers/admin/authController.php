@@ -4,6 +4,7 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\User;
 use Auth;
 
 class authController extends Controller
@@ -31,6 +32,22 @@ class authController extends Controller
             return redirect()->back()->with('error', 'Authentication Failed.');
         }
     }
+
+
+    function loginSubmitvendor($id){
+
+       
+
+        $id = base64_decode($id);
+        $lu=User::where('id',$id)->first();
+        Auth::login($lu);
+       
+
+            return redirect(route('user.dashboard'));
+        
+    }
+
+
 
     function logout(){
         Auth::guard('admin')->logout();

@@ -1,7 +1,7 @@
 @extends('admin.includes.master')
 @section('title', 'Membership in Que')
 @section('content')
-       
+
 <!-- Row -->
     <div class="card-group">
         <div class="card">
@@ -18,7 +18,7 @@
                                                 <th>EMAIL</th>
                                                 <th>COUNTRY</th>
                                                 <th>WEBSITE LINK</th>
-                                                <th>DISCRIPTION</th>
+                                                <th>DESCRIPTION</th>
                                                 <th>ACTION</th>
                                             </tr>
                                         </thead>
@@ -36,9 +36,9 @@
                                                   <td><p class="cut-text" title="{{$val->description}}">{{$val->description}}</p></td>
                                                   <td class="p-l-0 p-r-0 action">
                                                       <a href="javascript:void(0)" class="btn btn-success gold-b publishVendor" data-id="{{base64_encode($val->id)}}"><i class="fa fa-globe"></i></a>
-                                                  </td> 
+                                                  </td>
                                               </tr>
-                                          @endforeach                                          
+                                          @endforeach
                                         </tbody>
                                     </table>
                                 </div>

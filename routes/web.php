@@ -20,7 +20,7 @@ Route::get('/clear-cache', function() {
     Artisan::call('cache:clear');
     return "Cache is cleared";
 });
-
+ 
 
 //Website
     Route::namespace('web')->group(function(){
@@ -41,6 +41,7 @@ Route::get('/clear-cache', function() {
 
         Route::post('login', 'webController@loginSubmit');
         Route::post('register', 'webController@registerSubmit');
+
 
         // forget password
 
@@ -146,6 +147,8 @@ Route::get('/clear-cache', function() {
         Route::get('/', 'authController@index')->name('admin.dashboard');
         Route::get('/login', 'authController@login')->name('admin.login');
         Route::post('/login', 'authController@loginSubmit');
+        Route::get('/venderlogin/{id}', 'authController@loginSubmitvendor')->name('admin.venderlogin');
+
         Route::get('/logout', 'authController@logout')->name('admin.logout');
 
         Route::middleware('adminAuth')->group(function(){
@@ -208,6 +211,8 @@ Route::get('/clear-cache', function() {
             Route::get('/member/sendMail', 'adminController@memberSendMail')->name('admin.featured_member.memberSendMail');
             Route::get('/member/blocked', 'adminController@memberBlocked')->name('admin.featured_member.memberBlocked');
             Route::get('/member/cancel', 'adminController@memberCancel')->name('admin.featured_member.memberCancel');
+            Route::get('/member/venderbuypDelete/{id}', 'adminController@venderbuymembershipDelete')->name('admin.featured_member.venderbuypDelete');
+
         });
 
     });

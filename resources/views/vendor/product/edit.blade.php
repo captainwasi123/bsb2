@@ -12,8 +12,8 @@
                     <div class="form-body">
                         <h3 class="card-title">Product > {{$data['title']}}</h3>
                         <hr>
-                        
-  
+
+
                         <div class="row p-t-20">
                             <div class="col-md-6">
                                 @if(session()->has('success'))
@@ -29,20 +29,20 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-3">               
+                            <div class="col-md-3">
                                 <div class="form-group">
                                     <label for="input-file-now">Upload Product Image</label>
                                     <input type="file" id="input-file-now" class="dropify" name="product_image"/>
                                 </div>
                             </div>
-                            <div class="col-md-3">               
+                            <div class="col-md-3">
                                 <div class="form-group">
                                     <img src="{{URL::to('/public/storage/product/'.$data['image'])}}" class="img-responsive">
                                 </div>
                             </div>
                             <!--/span-->
                         </div>
-                      
+
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
@@ -56,7 +56,7 @@
                                     <input type="number" class="form-control" name="price" value="{{$data['price']}}" required>
                                 </div>
                             </div>
-                            
+
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label class="control-label">Catagory</label>
@@ -70,9 +70,9 @@
                                     </select>
                                 </div>
                             </div>
-                            
+
                         </div>
-                        
+
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
@@ -83,7 +83,7 @@
                             <!--/span-->
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label>Discription</label>
+                                    <label>Description</label>
                                     <textarea class="form-control" rows="5" cols="40" name="description" required>{{$val->description}}</textarea>
                                 </div>
                             </div>

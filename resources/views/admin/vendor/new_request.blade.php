@@ -34,7 +34,7 @@
                                 <th>EMAIL</th>
                                 <th>COUNTRY</th>
                                 <th>WEBSITE LINK</th>
-                                <th>DISCRIPTION</th>
+                                <th>DESCRIPTION</th>
                                 <th>ACTION</th>
                             </tr>
                         </thead>

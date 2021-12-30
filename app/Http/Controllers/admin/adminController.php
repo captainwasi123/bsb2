@@ -20,11 +20,11 @@ class adminController extends Controller
 
       $totaluser=User::all()->count();
       $vendoruser=User::where('vendor_status',2)->count();
-      
-      
+
+
     	return view('admin.index',['totaluser' => $totaluser, 'vendoruser' => $vendoruser]);
 
-    
+
     }
 
     function vendorNew(){
@@ -119,8 +119,23 @@ class adminController extends Controller
       return view('admin.featured_member.publish_member')->with($data);
     }
 
+    function venderbuymembershipDelete($id){
+        
+        $id = base64_decode($id);
+        $st = User::where('id', $id)->update([
+            'by_admin' => '0'
+        ]);
+        $id=VBMP::where('user_id',$id)->where('start_date','!=',Null)->latest()->delete();
+        
+     
+        return redirect()->back()->with('success', 'Member Package  has been deleted successfully');
+
+    }
+
+   
+
     function memberExpired(){
-          
+
         $curr = date('Y-m-d');
         $validate = date('Y-m-d', strtotime('+5 days', strtotime($curr)));
         $data = array(
@@ -151,7 +166,7 @@ class adminController extends Controller
             $to_name = $val->name;
             $to_email = $val->email;
             $data = array("name"=>$val->name);
-            
+
             Mail::send('mail.sendMail', $data, function($message) use ($to_name, $to_email) {
             $message->to($to_email, $to_name)
             ->subject("Subscription Expiry Notification");
@@ -159,10 +174,10 @@ class adminController extends Controller
             });
 
         }
-        
+
         return redirect()->back()->with('success', 'Email has been sent successfully');
 
-  
+
 
     }
 
@@ -179,29 +194,29 @@ class adminController extends Controller
     function directfeatured($id)
     {
         $id = base64_decode($id);
-       
+
         $st = VBMP::where('user_id', $id)->update([
             'status' => '2'
         ]);
-        
+
         $u = User::find($id);
         $u->is_feature = '1';
         $u->by_admin='1';
         $u->save();
 
         $date = date('Y-m-d');
-            
+
         $mp = new VBMP;
         $mp->user_id = $id;
         $mp->membership_vendor_id= '2';
         $mp->status=1;
-        $mp->expired_date=date('Y-m-d', strtotime($date. ' + 30 days')); 
+        $mp->expired_date=date('Y-m-d', strtotime($date. ' + 30 days'));
         $mp->buy_date=$date;
         $mp->save();
-    
+
 
         return redirect()->back()->with('success', 'Vendor Feature Updated.');
-      
+
 
     }
 
